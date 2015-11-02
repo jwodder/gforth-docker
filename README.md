@@ -26,16 +26,3 @@ follows:
 
 Note that the `-e bye` at the end is needed to keep Gforth from entering
 interactive mode once the script completes.
-
-## Configuration
-
-You can make Gforth always run certain commands on startup by adding the
-commands to `/usr/share/gforth/site-forth/siteinit.fs`, either by mounting a
-source file as a volume:
-
-    $ docker run -v /path/to/my-gforth-customizations.fs:/usr/share/gforth/site-forth/siteinit.fs jwodder/gforth
-
-or by copying the commands into a new derived image:
-
-    FROM jwodder/gforth
-    COPY my-gforth-customizations.fs /usr/share/gforth/site-forth/siteinit.fs
