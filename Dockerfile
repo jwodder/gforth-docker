@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV GFORTH_VERSION 0.7.2
 
-RUN wget -O - http://ftp.gnu.org/gnu/gforth/gforth-$GFORTH_VERSION.tar.gz | \
+RUN wget -O - http://www.complang.tuwien.ac.at/forth/gforth/gforth-$GFORTH_VERSION.tar.gz | \
 	tar zxv -C /tmp && \
 	cd /tmp/gforth-$GFORTH_VERSION && \
 	./configure --prefix=/usr --exec-prefix=/usr && \
