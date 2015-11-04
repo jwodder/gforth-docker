@@ -19,7 +19,7 @@ RUN wget -O - http://ftp.gnu.org/gnu/gforth/gforth-$GFORTH_VERSION.tar.gz | \
 	./configure --prefix=/usr --exec-prefix=/usr && \
 	make && \
 	make install && \
-	libtool --finish /usr/lib/gforth/0.7.3/libcc-named/ && \
+	libtool --finish /usr/lib/gforth/$GFORTH_VERSION/libcc-named/ && \
 	cd /tmp && rm -rf gforth-$GFORTH_VERSION
 
 CMD ["/usr/bin/gforth"]
