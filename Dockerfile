@@ -19,7 +19,7 @@ RUN wget -O - http://www.complang.tuwien.ac.at/forth/gforth/gforth-$GFORTH_VERSI
 	./configure --prefix=/usr --exec-prefix=/usr && \
 	make && \
 	make install && \
-	libtool --finish /usr/lib/gforth/0.7.3/libcc-named/ && \
+	libtool --finish /usr/lib/gforth/$GFORTH_VERSION/libcc-named/ && \
 	cd /tmp && rm -rf gforth-$GFORTH_VERSION
 
 CMD ["/usr/bin/gforth"]
